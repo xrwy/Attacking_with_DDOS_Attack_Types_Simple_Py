@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UDP Packet</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/button.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/page.css')}}">
+</head>
+<body>
+
+    <div>
+        <section class="ftco-section">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-6 text-center mb-5">
+                        <h2 class="heading-section">UDP Packet</h2>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-9 col-lg-8">
+                        <div class="wrap">
+                            <div class="img" style="background-image:url('./static/img/beach.jpg')">
+                            </div>
+                            <div class="login-wrap p-4 p-md-5">
+                                <div class="d-flex">
+                                    <div class="w-100">
+                                        <h3 class="mb-4" style="font-size:22px">UDP Packet</h3>
+                                    </div>
+                                </div>
+
+                                <form method="post" action="/udp_packet_result" class="signin-form">
+                                    <div class="form-group mt-3">
+                                        <input type="text" class="form-control" required="true" name="ip_or_domain">
+                                        <label class="form-control-placeholder" for="ip_or_domain">IP Address or Domain Name</label>
+                                    </div>
+                                    <div class="form-group mt-3">
+                                        <input type="text" class="form-control" required="true" name="destPort">
+                                        <label class="form-control-placeholder" for="destPort">Destination Port</label>
+                                    </div>
+                                    <div class="form-group mt-3">
+                                        <input type="text" class="form-control" required="true" name="attackSize">
+                                        <label class="form-control-placeholder" for="attackSize">Attack Size</label>
+                                    </div>
+                                    <div>
+                                        <p for="number_Of_Packages_To_Go" style="font-size:14px;">
+                                            * If you want the number of packets to be infinite, simply type upper(T) or lower(<span style="text-transform:lowercase !important;">t</span>).
+                                        </p>
+                                        <p for="number_Of_Packages_To_Go" style="font-size:14px;">
+                                            * If you don't want the number of packages to be infinite, just enter a number.
+                                        </p>
+                                    </div>
+                                    <div class="form-group mt-3">
+                                        <input type="text" class="form-control" required="true" name="number_Of_Packages_To_Go">
+                                        <label class="form-control-placeholder" for="number_Of_Packages_To_Go">Number Of Packages To Go </label>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <button type="submit" class="form-control btn btn-primary rounded submit px-4" style="font-size: 17px;">UDP Packet Attack Start</button>
+                                    </div>
+                                </form>
+                                <form method="post" action="/udp_packet_stop" class="signin-form">
+                                    <div class="form-group mt-3">
+                                        <input type="text" class="form-control" required="true" name="udp_packet_stop">
+                                        <label class="form-control-placeholder" for="udp_packet_stop">Y / N</label>
+                                    </div>
+                                    <div class="form-group">
+                                        <button type="submit" class="form-control btn btn-primary rounded submit px-4" style="font-size: 17px;">
+                                            UDP Packer Stop
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
